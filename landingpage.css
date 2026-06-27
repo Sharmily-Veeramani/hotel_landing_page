@@ -1,0 +1,351 @@
+:root {
+  --primary: #0f5b3c;
+  --dark-green: #124c35;
+  --accent: #f5b82e;
+  --bg: #fff8f0;
+  --card: #ffffff;
+  --light-gray: #ededed;
+  --text: #222222;
+  --paragraph: #666666;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+.container {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+.section {
+  padding: 80px 0;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+.btn-secondary {
+  background: white;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.btn-dark {
+  background: var(--dark-green);
+  color: white;
+}
+
+.site-header {
+  padding: 24px 0;
+  background: var(--bg);
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+.brand-icon {
+  color: var(--accent);
+  font-size: 22px;
+}
+.nav-links {
+  display: flex;
+  gap: 22px;
+  color: var(--paragraph);
+  font-size: 15px;
+}
+.nav-links a:hover { color: var(--primary); }
+
+.hero {
+  padding: 40px 0 70px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 10px;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+h1, h2, h3, h4 { line-height: 1.15; margin: 0 0 12px; }
+h1 { font-size: 56px; font-weight: 700; }
+h2 { font-size: 36px; }
+.lead, .text-block p, .reservation-copy p, .features-text p, .chef-list p, .footer-grid p { color: var(--paragraph); }
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin: 24px 0 24px;
+}
+.review-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--paragraph);
+}
+.avatar-stack {
+  display: flex;
+  gap: 4px;
+  color: var(--accent);
+  font-size: 18px;
+}
+.hero-visual {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-circle {
+  position: absolute;
+  inset: 20px 0 20px 80px;
+  background: rgba(245, 184, 46, 0.25);
+  border-radius: 50%;
+  z-index: 0;
+}
+.hero-visual img {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 12px solid var(--accent);
+  box-shadow: var(--shadow);
+  z-index: 1;
+}
+
+.section-head.centered { text-align: center; margin-bottom: 34px; }
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.tabs a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: white;
+  color: var(--paragraph);
+  box-shadow: var(--shadow);
+}
+.tabs a.active {
+  background: var(--primary);
+  color: white;
+}
+.card-grid, .testimonial-grid, .chef-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+}
+.card:hover { transform: translateY(-8px); }
+.dish-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+.card-body h3 { font-size: 20px; margin-bottom: 6px; }
+.card-body p { margin: 0 0 6px; color: var(--accent); }
+.card-body strong { color: var(--primary); }
+
+.why-grid, .reservation-grid, .features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.image-stack {
+  position: relative;
+  min-height: 380px;
+}
+.photo {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 8px solid white;
+  box-shadow: var(--shadow);
+}
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+.photo-1 { width: 180px; height: 180px; top: 0; left: 40px; }
+.photo-2 { width: 160px; height: 160px; top: 120px; right: 20px; }
+.photo-3 { width: 140px; height: 140px; bottom: 20px; left: 120px; }
+.feature-list { margin: 20px 0 24px; }
+.feature-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.feature-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(15, 91, 60, 0.12);
+  color: var(--primary);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.reservation-cta {
+  background: linear-gradient(90deg, rgba(245, 184, 46, 0.2), rgba(255,255,255,0.7));
+  border-radius: 24px;
+  margin: 0 20px;
+}
+.reservation-visual img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 10px solid var(--accent);
+}
+
+.testimonial-card { text-align: left; }
+.stars { color: var(--accent); font-size: 20px; margin-bottom: 8px; }
+.person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.person img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.person span { display: block; color: var(--paragraph); font-size: 13px; }
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+.check-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--light-gray);
+  color: var(--paragraph);
+}
+.features-visual {
+  position: relative;
+  min-height: 360px;
+}
+.feature-photo {
+  position: absolute;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+.feature-photo.main { width: 280px; height: 340px; top: 0; left: 40px; }
+.feature-photo.side { width: 180px; height: 220px; right: 0; bottom: 0; border: 6px solid white; }
+
+.chef-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 30px;
+  align-items: start;
+}
+.chef-cards { grid-template-columns: repeat(3, 1fr); }
+.chef-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+.chef-card h3 { font-size: 18px; margin-bottom: 4px; }
+.chef-card p { color: var(--paragraph); margin-bottom: 8px; }
+.socials { color: var(--primary); font-size: 13px; }
+
+.reservation-banner {
+  background: var(--accent);
+  padding: 26px 0;
+  margin-top: 30px;
+}
+.banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.banner-inner h3 { margin: 0; font-size: 24px; }
+
+.site-footer {
+  padding: 60px 0 40px;
+  background: var(--bg);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 0.8fr;
+  gap: 24px;
+}
+.footer-brand { margin-bottom: 12px; }
+.social-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; color: var(--paragraph); }
+.footer-grid h4 { margin-bottom: 10px; }
+.footer-grid a { display: block; color: var(--paragraph); margin-bottom: 8px; }
+
+@media (max-width: 980px) {
+  .hero-grid, .why-grid, .reservation-grid, .features-grid, .chef-layout {
+    grid-template-columns: 1fr;
+  }
+  .card-grid, .testimonial-grid, .chef-cards {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual { min-height: 360px; }
+  .feature-photo.main { left: 0; }
+}
+
+@media (max-width: 760px) {
+  .nav-bar, .banner-inner, .hero-actions, .footer-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  h1 { font-size: 42px; }
+  h2 { font-size: 28px; }
+  .hero-visual img { width: 280px; height: 280px; }
+  .image-stack { min-height: 300px; }
+  .photo-1 { width: 140px; height: 140px; left: 0; }
+  .photo-2 { width: 120px; height: 120px; right: 0; top: 90px; }
+  .photo-3 { width: 110px; height: 110px; left: 70px; bottom: 0; }
+  .feature-photo.main { width: 220px; height: 280px; }
+  .feature-photo.side { width: 140px; height: 180px; }
+}
+
